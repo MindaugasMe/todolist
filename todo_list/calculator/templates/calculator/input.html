@@ -1,0 +1,26 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<h1>Calculator</h1>
+<form action="count" method="POST">
+{% csrf_token %}
+    <label for="activities">Select a activity:</label>
+    <select name="activity" id="activities" required>
+        <option value="">--Please choose an option--</option>
+        <option value="0">Walking</option>
+        <option value="1">Running</option>
+        <option value="2">Swimming</option>
+        <option value="3">Cycling</option>
+    </select>
+    <div>
+        <br>Enter time:<br>
+        <input style="width: 30%;" type="text" name="time"> Time 
+    </div>
+    <div>
+        <br>Enter weight:<br>
+        <input style="width: 30%;" type="text" name="weight"> Kg
+    </div>
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+{% endblock %}

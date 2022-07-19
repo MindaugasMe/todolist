@@ -1,0 +1,8 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'index' %}">&#8592; Back</a>
+</div>
+<h1>Calories burned = {{result}} </h1>
+<h2>you were {{activity}}</h2>
+{% endblock %}s

@@ -1,0 +1,5 @@
+/todo_list/db.sqlite3
+/todo_list/todo_list/secret_settings.py
+/venv/
+/venv/**
+**/__pycache__/
