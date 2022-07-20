@@ -28,7 +28,12 @@ def count_calories(request):
         with open('exercise_history.csv', 'a') as f:
             writer = csv.writer(f)
             writer.writerow(row)
-        return render(request, "calculator/result.html", {"result": res, "activity": action, "activity_from": activity_from, "activity_to": activity_to})
+        return render(request, "calculator/result.html", {
+            "result": res, 
+            "activity": action, 
+            "activity_from": activity_from, 
+            "activity_to": activity_to
+            })
     else:
         res = "Only digits are allowed"
         return render(request, "calculator/result.html", {"result": res})
@@ -40,6 +45,11 @@ def history(request):
     df_exercise = df['exercise']
     df_calories = df['calories']
     df_time_to = df['time_to']
-    return render(request, "calculator/history.html", {'exercises': df_exercise, 'time_from_values': df_time_from, 'time_to_values': df_time_to, 'calories': df_calories})
+    return render(request, "calculator/history.html", {
+        'exercises': df_exercise,
+        'time_from_values': df_time_from, 
+        'time_to_values': df_time_to, 
+        'calories': df_calories
+        })
 
 
