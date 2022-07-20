@@ -1,8 +1,10 @@
 {% extends 'base/main.html' %}
 {% block content %}
 <div class="header-bar">
-    <a href="{% url 'index' %}">&#8592; Back</a>
+    <a href="{% url 'count' %}">&#8592; Back</a>
+    <a href="{% url 'history' %}">History &#8594;</a>
 </div>
-<h1>Calories burned = {{result}} </h1>
+<h1>Results</h1>
+<h2>from {{activity_from}} to {{activity_to}} burned: {{result}} calories</h2>
 <h2>you were {{activity}}</h2>
-{% endblock %}s
+{% endblock %}

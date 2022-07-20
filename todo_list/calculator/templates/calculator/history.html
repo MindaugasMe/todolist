@@ -1,0 +1,28 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'index' %}">&#8592; Back to calculator</a>
+    <h1>Results</h1>
+</div>
+    <ul style="float: left;">
+        {% for exercise in exercises %}    
+            <h5>{{exercise}}</h5>
+        {% endfor %}    
+    </ul>
+    <ul style="float: left;">
+        {% for time_from in time_from_values %}
+            <h5>time from: {{time_from}}</h5>
+        {% endfor %}
+    </ul>
+    <ul style="float: left;">
+        {% for time_to in time_to_values %}
+            <h5>time to: {{time_to}}</h5>
+        {% endfor %}
+    </ul>
+    <ul style="float: left;">
+        {% for value in calories %}
+            <h5>calories: {{value}}</h5>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
